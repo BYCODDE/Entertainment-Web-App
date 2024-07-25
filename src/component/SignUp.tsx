@@ -2,7 +2,7 @@ import Logo2 from "/assets/logo.svg";
 
 export default function SignUp() {
   return (
-    <div className="bg-custom-black flex justify-center items-center min-h-screen flex-col">
+    <div className="bg-custom-black flex justify-center items-center h-full flex-col">
       <header>
         <img src={Logo2} alt="" />
       </header>

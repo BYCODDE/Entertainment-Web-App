@@ -6,7 +6,7 @@ import tvIcon from "/assets/icon-nav-tv-series.svg";
 import bookmarkIcon from "/assets/icon-nav-bookmark.svg";
 export default function Header() {
   return (
-    <div className="bg-custom-blue flex  justify-between items-center w-screen p-[16px]">
+    <div className="bg-custom-blue flex  justify-between items-center w-full p-[16px]">
       <img className="w-[30px] h-[30px]" src={Logo} alt="Logo" />
       <div className="flex gap-[40px]">
         <img className="w-[30px] h-[30px]" src={homeIcon} alt="home-icon" />
