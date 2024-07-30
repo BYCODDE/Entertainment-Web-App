@@ -7,7 +7,7 @@ export default function Recommended() {
   return (
     <div className="flex   w-full h-full  flex-col p-[16px] overflow-hidden ">
       <h3 className="text-[20px] tracking-[0.312px] ">Recommended for you</h3>
-      <div className="mt-[24px] flex justify-between">
+      <div className="mt-[24px] flex justify-between gap-[15px]">
         <div className="flex flex-col gap-[15px]">
           <img
             src={greatLands}
