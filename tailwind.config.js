@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import filters from "tailwindcss-filters";
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,7 +14,11 @@ export default {
       fontFamily: {
         outfit: ["Outfit", "sans-serif"],
       },
+      filter: {
+        "custom-filter":
+          "invert(99%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(202%) contrast(100%)",
+      },
     },
   },
-  plugins: [],
+  plugins: [filters],
 };
