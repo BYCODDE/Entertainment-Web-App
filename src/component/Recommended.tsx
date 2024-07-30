@@ -5,10 +5,10 @@ import nolandBeyond from "/assets/thumbnails/no-land-beyond/regular/small.jpg";
 
 export default function Recommended() {
   return (
-    <div className="flex   w-full h-full  flex-col p-[16px]">
-      <h3 className="text-[20px] tracking-[0.312px]">Recommended for you</h3>
-      <div>
-        <div className="">
+    <div className="flex   w-full h-full  flex-col p-[16px] ">
+      <h3 className="text-[20px] tracking-[0.312px] ">Recommended for you</h3>
+      <div className="mt-[24px] flex justify-between">
+        <div className="flex flex-col gap-[15px]">
           <img
             src={greatLands}
             alt="greatLands"
@@ -20,7 +20,7 @@ export default function Recommended() {
             className="rounded-[8px] max-h-[110px] max-w-[164px]"
           />
         </div>
-        <div>
+        <div className="flex flex-col gap-[15px]">
           <img
             src={earthsUntouched}
             alt="earthsUntouched"
