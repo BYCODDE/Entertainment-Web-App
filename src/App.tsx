@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 function App() {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
-  // const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,7 +19,6 @@ function App() {
         console.log(jsonData.map((item: string) => item.title));
 
         setData(jsonData);
-        // setIsLoading(true);
       } catch (err) {
         setError(error);
       }
