@@ -10,6 +10,12 @@ import sameAnswer2 from "/assets/thumbnails/same-answer-2/regular/small.jpg";
 import theRockies from "/assets/thumbnails/the-rockies/regular/small.jpg";
 import bookMarkFull from "/assets/icon-bookmark-full.svg";
 import communityofOurs from "/assets/thumbnails/community-of-ours/regular/small.jpg";
+import theHeiress from "/assets/thumbnails/the-heiress/regular/small.jpg";
+import whisperingHill from "/assets/thumbnails/whispering-hill/regular/small.jpg";
+import loneHeart from "/assets/thumbnails/lone-heart/regular/small.jpg";
+import Dogs from "/assets/thumbnails/dogs/regular/small.jpg";
+import theTastyTour from "/assets/thumbnails/the-tasty-tour/regular/small.jpg";
+import unresolvedCases from "/assets/thumbnails/unresolved-cases/regular/small.jpg";
 export default function Recommended() {
   return (
     <div className="flex   w-full h-full  flex-col p-[16px] overflow-hidden ">
@@ -166,10 +172,156 @@ export default function Recommended() {
               Community of Ours
             </span>
           </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMarkFull} alt="bookMarkFull" />
+            </div>
+            <img
+              src={theHeiress}
+              alt="theHeiress"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2021{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={movieIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              Movie
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              PG
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">The Heiress</span>
+          </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMark} alt="bookMark" />
+            </div>
+            <img
+              src={whisperingHill}
+              alt="whisperingHill"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2017{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={movieIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              Movie
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>E
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">
+              Whispering Hill
+            </span>
+          </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMarkFull} alt="bookMarkFull" />
+            </div>
+            <img
+              src={loneHeart}
+              alt="loneHeart"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2017{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={movieIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              Movie
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>E
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">Lone Heart</span>
+          </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMarkFull} alt="bookMarkFull" />
+            </div>
+            <img
+              src={Dogs}
+              alt="Dogs"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2016{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={tvIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              TV Series
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>F
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">Dogs</span>
+          </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMark} alt="bookMark" />
+            </div>
+            <img
+              src={theTastyTour}
+              alt="theTastyTour"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2016{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={tvIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              TV Series
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>PG
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">
+              The Tasty Tour
+            </span>
+          </div>
+          <div className="relative">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+              <img src={bookMark} alt="bookMark" />
+            </div>
+            <img
+              src={unresolvedCases}
+              alt="unresolvedCases"
+              className="rounded-[8px] max-h-[110px] max-w-[164px]"
+            />
+            <div className="opacity-50 flex  text-white items-center justify-start gap-[6px] mt-[10px] text-[11px] ">
+              2018{" "}
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              <img
+                src={tvIcon}
+                alt="movieIcon"
+                className="filter-custom-filter w-[11px] h-[11
+                px]"
+              />
+              TV Series
+              <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
+              18+
+            </div>
+            <span className="text-[14px] tracking-[0.312px]">
+              Unresolved Cases
+            </span>
+          </div>
         </div>
         <div className="flex flex-col gap-[15px]">
           <div className="relative">
-            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
+            <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-  [32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%] ">
               <img src={bookMark} alt="bookMark" />
             </div>
             <img
