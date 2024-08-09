@@ -1,8 +1,13 @@
 import movieIcon from "/assets/icon-nav-movies.svg";
 import bookMark from "/assets/icon-bookmark-empty.svg";
-export default function Trending() {
+import { useData } from "../App";
+import { dataType } from "../App";
+export default function Trending() <dataType>{
+  const {data,error} = useData()
+  console.log(data);
+
   return (
-    <div className="p-4 w-full h-[50%]">
+    <div className="p-4 w-full ">
       <h3
         className="text-[20px] tracking-[0.312px]
       "

@@ -1,39 +1,63 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Home from "./Home";
 import Login from "./component/Login";
 import SignUp from "./component/SignUp";
 import Home from "./pages/Home";
-import { useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+
+export type TrendingItem = {
+  title: string;
+  year: string;
+  category: string;
+  rating: string;
+  thumbnail: {
+    trending: {
+      small: string;
+      large: string;
+    };
+  };
+};
+
+type DataContextType = {
+  data: { trending: TrendingItem[] } | null;
+  error: Error | null;
+};
+
+// Create the context with the type
+const DataContext = createContext<DataContextType | undefined>(undefined);
+
+// Custom hook to use the DataContext
+export const useData = () => useContext(DataContext);
+
 function App() {
-  const [data, setData] = useState(null);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState<DataContextType["data"]>(null);
+  const [error, setError] = useState<Error | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("data.json");
         if (!response.ok) {
-          throw Error("Could not fetch the data");
+          throw new Error("Could not fetch the data");
         }
         const jsonData = await response.json();
-        console.log(jsonData.map((item: string) => item.title));
-
         setData(jsonData);
       } catch (err) {
-        setError(error);
+        setError(err as Error);
       }
     };
     fetchData();
   }, []);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/SignUp" element={<SignUp />} />
-      </Routes>
-    </BrowserRouter>
+    <DataContext.Provider value={{ data, error }}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </DataContext.Provider>
   );
 }
 
