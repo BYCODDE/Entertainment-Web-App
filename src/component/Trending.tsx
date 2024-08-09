@@ -3,7 +3,9 @@ import bookMark from "/assets/icon-bookmark-empty.svg";
 import { useData } from "../App";
 export default function Trending() {
   const { data } = useData();
-  console.log(data);
+  // const trendingItems = data?.trending || [];
+  console.log(data?.map((item) => item?.thumbnail.trending?.small));
+console.log(data);
 
   return (
     <div className="p-4 w-full ">
@@ -14,6 +16,8 @@ export default function Trending() {
         Trending
       </h3>
       <div className="flex  gap-[16px] w-full h-full">
+        {/* {
+          data?.trending?.map((item)=> (
         <div
           className=" mt-[16px] rounded-[8px] w-full h-full p-[8px] max-w-[240px] max-h-[140px] relative"
           style={{
@@ -40,7 +44,10 @@ export default function Trending() {
           </div>
           <span className="text-[18px] tracking-[0.312px]">Beyond Earth</span>
         </div>
-        <div
+
+          ))
+        } */}
+        {/* <div
           className=" mt-[16px] rounded-[8px] w-full h-full max-w-[240px] max-h-[140px] p-[8px] relative "
           style={{
             backgroundImage:
@@ -65,7 +72,7 @@ export default function Trending() {
             PG
           </div>
           <span className="text-[18px] tracking-[0.312px]">Bottom Gear</span>
-        </div>
+        </div> */}
       </div>
     </div>
   );
