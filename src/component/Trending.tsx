@@ -1,9 +1,8 @@
 import movieIcon from "/assets/icon-nav-movies.svg";
 import bookMark from "/assets/icon-bookmark-empty.svg";
 import { useData } from "../App";
-import { dataType } from "../App";
-export default function Trending() <dataType>{
-  const {data,error} = useData()
+export default function Trending() {
+  const { data } = useData();
   console.log(data);
 
   return (

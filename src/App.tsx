@@ -22,11 +22,15 @@ type DataContextType = {
   error: Error | null;
 };
 
-// Create the context with the type
 const DataContext = createContext<DataContextType | undefined>(undefined);
 
-// Custom hook to use the DataContext
-export const useData = () => useContext(DataContext);
+export const useData = () => {
+  const context = useContext(DataContext);
+  if (context === undefined) {
+    throw new Error("useData must be used within a DataProvider");
+  }
+  return context;
+};
 
 function App() {
   const [data, setData] = useState<DataContextType["data"]>(null);
