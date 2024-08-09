@@ -15,10 +15,12 @@ export type TrendingItem = {
       large: string;
     };
   };
+  isTrending: boolean;
+  isBookmarked: boolean;
 };
 
 type DataContextType = {
-  data: { trending: TrendingItem[] } | null;
+  data: TrendingItem[] | null;
   error: Error | null;
 };
 
