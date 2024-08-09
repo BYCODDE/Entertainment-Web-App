@@ -6,7 +6,6 @@ import { useData } from "../App";
 
 export default function Recommended() {
   const { data } = useData();
-
   return (
     <div className="flex w-full h-full flex-col p-[16px] overflow-hidden">
       <h3 className="text-[20px] tracking-[0.312px]">Recommended for you</h3>
@@ -17,7 +16,11 @@ export default function Recommended() {
               <div key={index} className="flex flex-col gap-[15px]">
                 <div className="relative">
                   <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%]">
-                    <img src={bookMark} alt="bookmark" />
+                    {item.isBookmarked ? (
+                      <img src={bookMarkFull} alt="bookmark" />
+                    ) : (
+                      <img src={bookMark} alt="bookmark" />
+                    )}
                   </div>
                   <img
                     src={item.thumbnail.regular.small}
