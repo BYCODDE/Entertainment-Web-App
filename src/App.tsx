@@ -12,6 +12,12 @@ export type TrendingItem = {
   thumbnail: {
     trending: {
       small: string;
+      medium: string;
+      large: string;
+    };
+    regular: {
+      small: string;
+      medium: string;
       large: string;
     };
   };

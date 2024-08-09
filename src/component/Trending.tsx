@@ -4,8 +4,6 @@ import { useData } from "../App";
 export default function Trending() {
   const { data } = useData();
 
-  console.log(data);
-
   return (
     <div className="p-4 w-full ">
       <h3
