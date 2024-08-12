@@ -28,6 +28,8 @@ export type TrendingItem = {
 type DataContextType = {
   data: TrendingItem[] | null;
   error: Error | null;
+  search: string;
+  setSearch: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -43,6 +45,7 @@ export const useData = () => {
 function App() {
   const [data, setData] = useState<DataContextType["data"]>(null);
   const [error, setError] = useState<Error | null>(null);
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -61,7 +64,7 @@ function App() {
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, error }}>
+    <DataContext.Provider value={{ data, error,search,setSearch }}>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
