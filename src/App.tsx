@@ -36,6 +36,8 @@ type DataContextType = {
   setMovie: React.Dispatch<React.SetStateAction<boolean>>;
   tv: boolean;
   setTv: React.Dispatch<React.SetStateAction<boolean>>;
+  marked: boolean;
+  setMarked: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -55,6 +57,7 @@ function App() {
   const [home, setHome] = useState(true);
   const [movie, setMovie] = useState(false);
   const [tv, setTv] = useState(false);
+  const [marked, setMarked] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -84,6 +87,8 @@ function App() {
         setMovie,
         tv,
         setTv,
+        marked,
+        setMarked,
       }}
     >
       <BrowserRouter>

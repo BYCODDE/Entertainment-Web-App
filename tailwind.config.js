@@ -17,6 +17,8 @@ export default {
       filter: {
         "custom-filter":
           "invert(99%) sepia(0%) saturate(0%) hue-rotate(348deg) brightness(202%) contrast(100%)",
+        "custom-filter-reverse":
+          "filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%)",
       },
     },
   },
