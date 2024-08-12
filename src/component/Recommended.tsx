@@ -7,14 +7,15 @@ import { useData } from "../App";
 export default function Recommended() {
   const { data,search } = useData();
   console.log(search);
-  
+
   return (
     <div className="flex w-full h-full flex-col p-[16px] overflow-hidden overflow-y-scroll">
       <h3 className="text-[20px] tracking-[0.312px]">Recommended for you</h3>
       <div className="mt-[24px] flex justify-between gap-[15px] flex-wrap">
         {data?.map(
           (item, index) =>
-            !item.isTrending && (
+            !item.isTrending &&
+            item.title.toLowerCase().includes(search) && (
               <div key={index} className="flex flex-col gap-[15px]">
                 <div className="relative">
                   <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%]">
@@ -48,7 +49,6 @@ export default function Recommended() {
               </div>
             )
         )}
-
       </div>
     </div>
   );
