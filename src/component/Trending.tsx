@@ -28,7 +28,7 @@ export default function Trending() {
                 <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] ">
                   <img src={bookMark} alt="bookMark" />
                 </div>
-                <div className="opacity-50 flex  text-white items-center justify-between mt-[60px] ">
+                <div className="opacity-50 flex  text-white items-center justify-between mt-[60px] text-[10px] gap-[3px]">
                   {item.year}
                   <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
                   <img
@@ -40,7 +40,7 @@ export default function Trending() {
                   <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF] "></div>
                   {item.rating}
                 </div>
-                <span className="text-[18px] tracking-[0.312px]">
+                <span className="text-[15px] tracking-[0.312px] whitespace-nowrap overflow-hidden text-ellipsis">
                   {item.title}
                 </span>
               </div>
