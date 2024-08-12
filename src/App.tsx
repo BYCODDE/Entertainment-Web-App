@@ -30,6 +30,12 @@ type DataContextType = {
   error: Error | null;
   search: string;
   setSearch: React.Dispatch<React.SetStateAction<string>>;
+  home: boolean;
+  setHome: React.Dispatch<React.SetStateAction<boolean>>;
+  movie: boolean;
+  setMovie: React.Dispatch<React.SetStateAction<boolean>>;
+  tv: boolean;
+  setTv: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -46,7 +52,9 @@ function App() {
   const [data, setData] = useState<DataContextType["data"]>(null);
   const [error, setError] = useState<Error | null>(null);
   const [search, setSearch] = useState("");
-
+  const [home, setHome] = useState(true);
+  const [movie, setMovie] = useState(false);
+  const [tv, setTv] = useState(false);
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -64,7 +72,20 @@ function App() {
   }, []);
 
   return (
-    <DataContext.Provider value={{ data, error,search,setSearch }}>
+    <DataContext.Provider
+      value={{
+        data,
+        error,
+        search,
+        setSearch,
+        home,
+        setHome,
+        movie,
+        setMovie,
+        tv,
+        setTv,
+      }}
+    >
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
