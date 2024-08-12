@@ -13,7 +13,7 @@ export default function Search() {
       <div className="flex gap-[16px] ">
         <img src={SearchIcon} alt="" />
         <input
-          className=" focus:outline-none  opacity-70 tracking-[0.5px]  bg-custom-black"
+          className=" focus:outline-none  opacity-70 tracking-[0.5px]  bg-custom-black hover:cursor-pointer"
           type="text"
           placeholder="Search for movies or TV series "
           value={search}
