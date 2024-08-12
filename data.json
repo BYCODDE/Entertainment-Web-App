@@ -3,7 +3,7 @@
     "title": "Beyond Earth",
     "thumbnail": {
       "trending": {
-        "small": "./assets/thumbnails/beyond-earth/trending/small.jpg",
+        "small": "/assets/thumbnails/beyond-earth/trending/small.jpg",
         "large": "./assets/thumbnails/beyond-earth/trending/large.jpg"
       },
       "regular": {
@@ -22,7 +22,7 @@
     "title": "Bottom Gear",
     "thumbnail": {
       "trending": {
-        "small": "./assets/thumbnails/bottom-gear/trending/small.jpg",
+        "small": "/assets/thumbnails/bottom-gear/trending/small.jpg",
         "large": "./assets/thumbnails/bottom-gear/trending/large.jpg"
       },
       "regular": {
@@ -60,7 +60,7 @@
     "title": "1998",
     "thumbnail": {
       "trending": {
-        "small": "./assets/thumbnails/1998/trending/small.jpg",
+        "small": "/assets/thumbnails/1998/trending/small.jpg",
         "large": "./assets/thumbnails/1998/trending/large.jpg"
       },
       "regular": {
@@ -79,7 +79,7 @@
     "title": "Dark Side of the Moon",
     "thumbnail": {
       "trending": {
-        "small": "./assets/thumbnails/dark-side-of-the-moon/trending/small.jpg",
+        "small": "/assets/thumbnails/dark-side-of-the-moon/trending/small.jpg",
         "large": "./assets/thumbnails/dark-side-of-the-moon/trending/large.jpg"
       },
       "regular": {
