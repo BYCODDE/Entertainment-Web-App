@@ -153,7 +153,7 @@ export default function Recommended() {
                 <img
                   src={item.thumbnail.regular.small}
                   alt={item.title}
-                  className="md:max-w-[264px] md:max-h-[140px]  rounded-[8px] max-h-[110px] max-w-[164px]"
+                  className="xl:max-w-[280px] xl:max-h-[174px]  md:max-w-[264px] md:max-h-[140px]  rounded-[8px] max-h-[110px] max-w-[164px]"
                 />
                 <div className="md:text-[15px]  opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
                   {item.year}{" "}

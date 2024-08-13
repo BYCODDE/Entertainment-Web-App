@@ -33,18 +33,20 @@ export default function Trending() {
 
   return (
     <div className="p-4 w-full">
-      <h3 className="md:text-[32px] text-[20px] tracking-[0.312px]">Trending</h3>
+      <h3 className="md:text-[32px] text-[20px] tracking-[0.312px]">
+        Trending
+      </h3>
       <div className="relative">
         <div
           ref={scrollRef}
-          className="scrollbar-hide flex gap-[16px] w-full h-full overflow-x-auto"
+          className="xl:justify-center  scrollbar-hide flex gap-[16px] w-full h-full overflow-x-auto"
         >
           {data?.map(
             (item) =>
               item.isTrending && (
                 <div
                   key={item.title}
-                  className="mt-[16px] rounded-[8px] p-[8px] min-w-[240px] max-h-[140px] relative"
+                  className="xl:w-[470px] xl:h-[230px] mt-[16px] rounded-[8px] p-[8px] min-w-[240px] max-h-[140px] relative"
                   style={{
                     backgroundImage: `url(${item?.thumbnail.trending?.small})`,
                     backgroundSize: "cover",
@@ -66,7 +68,7 @@ export default function Trending() {
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     {item.rating}
                   </div>
-                  <span className="md:text-[22px] text-[15px] tracking-[0.312px] whitespace-nowrap overflow-hidden text-ellipsis">
+                  <span className="xl:text-[24px] md:text-[22px] text-[15px] tracking-[0.312px] whitespace-nowrap overflow-hidden text-ellipsis">
                     {item.title}
                   </span>
                 </div>
