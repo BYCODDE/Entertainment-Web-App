@@ -33,7 +33,7 @@ export default function Trending() {
 
   return (
     <div className="p-4 w-full">
-      <h3 className="text-[20px] tracking-[0.312px]">Trending</h3>
+      <h3 className="md:text-[32px] text-[20px] tracking-[0.312px]">Trending</h3>
       <div className="relative">
         <div
           ref={scrollRef}
@@ -54,7 +54,7 @@ export default function Trending() {
                   <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%]">
                     <img src={bookMark} alt="bookmark" />
                   </div>
-                  <div className="opacity-50 flex text-white items-center justify-between mt-[60px] text-[10px] gap-[3px]">
+                  <div className="md:text-[15px] opacity-50 flex text-white items-center justify-between mt-[60px] text-[10px] gap-[3px]">
                     {item.year}
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     <img
@@ -66,7 +66,7 @@ export default function Trending() {
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     {item.rating}
                   </div>
-                  <span className="text-[15px] tracking-[0.312px] whitespace-nowrap overflow-hidden text-ellipsis">
+                  <span className="md:text-[22px] text-[15px] tracking-[0.312px] whitespace-nowrap overflow-hidden text-ellipsis">
                     {item.title}
                   </span>
                 </div>
