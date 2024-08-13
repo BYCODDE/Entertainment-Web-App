@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import movieIcon from "/assets/icon-nav-movies.svg";
 import bookMark from "/assets/icon-bookmark-empty.svg";
 import { useData } from "../App";
