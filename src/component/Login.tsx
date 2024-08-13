@@ -35,7 +35,7 @@ export default function Login() {
       <main className="max-w-[327px] max-h-[365px] rounded-[10px] bg-custom-blue mt-[60px] p-[24px]">
         <form onSubmit={handleSubmit(onSubmit)}>
           <h2 className="text-[32px] tracking-[0.5px]">Login</h2>
-          <div className="mt-[40px]">
+          <div className="mt-[20px]">
             <input
               type="email"
               id="email"
@@ -59,10 +59,10 @@ export default function Login() {
             )}
             <hr className="w-full h-[1px] bg-custom-grey opacity-30" />
           </div>
-          <div className="flex flex-col items-center justify-center mt-[40px] gap-[24px]">
+          <div className="flex flex-col items-center justify-center mt-[20px] gap-[24px]">
             <button
               type="submit"
-              className="bg-custom-red pt-[15px] pb-[15px] rounded-[6px] w-[279px] h-[48px] text-white font-normal"
+              className="bg-custom-red pt-[15px] pb-[15px] rounded-[6px] w-[279px] h-[48px] text-white font-normal hover:bg-[#FFFFFF] hover:text-[#161D2F]"
             >
               <span>Login to your account</span>
             </button>
