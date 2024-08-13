@@ -11,7 +11,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   const onSignUp = () => {
-    navigate("/SignUp");
+    navigate("/");
   };
 
   const {
@@ -23,7 +23,7 @@ export default function Login() {
   const onSubmit = (data: FormValues) => {
     console.log(data);
 
-    navigate("/");
+    navigate("/home");
   };
 
   return (
