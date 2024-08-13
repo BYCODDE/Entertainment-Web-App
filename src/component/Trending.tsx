@@ -12,15 +12,18 @@ export default function Trending() {
 
     const onWheel = (event: WheelEvent) => {
       if (scrollContainer) {
+        console.log("Wheel event detected:", event.deltaY);
         event.preventDefault();
         scrollContainer.scrollBy({
-          left: event.deltaY < 0 ? -100 : 100, 
+          left: event.deltaY < 0 ? -100 : 100,
         });
+      } else {
+        console.error("Scroll container is null");
       }
     };
 
     if (scrollContainer) {
-      scrollContainer.addEventListener("wheel", onWheel);
+      scrollContainer.addEventListener("wheel", onWheel, { passive: false });
     }
 
     return () => {
