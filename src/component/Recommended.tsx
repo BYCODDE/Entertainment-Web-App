@@ -10,7 +10,9 @@ export default function Recommended() {
 
   return (
     <div className="flex w-full h-full flex-col p-[16px] overflow-hidden overflow-y-scroll">
-      <h3 className="text-[20px] tracking-[0.312px]">Recommended for you</h3>
+      <h3 className="md:text-[32px] text-[20px] tracking-[0.312px]">
+        Recommended for you
+      </h3>
       <div className="mt-[24px] flex justify-between gap-[15px] flex-wrap">
         {data?.map(
           (item, index) =>
@@ -29,9 +31,9 @@ export default function Recommended() {
                   <img
                     src={item.thumbnail.regular.small}
                     alt={item.title}
-                    className="rounded-[8px] max-h-[110px] max-w-[164px]"
+                    className="md:max-w-[264px] md:max-h-[140px]   rounded-[8px] max-h-[110px] max-w-[164px]"
                   />
-                  <div className="opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
+                  <div className="md:text-[15px] opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
                     {item.year}{" "}
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     <img
@@ -43,7 +45,7 @@ export default function Recommended() {
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     {item.rating}
                   </div>
-                  <span className="text-[14px] tracking-[0.312px]">
+                  <span className="md:text-[18px] text-[14px] tracking-[0.312px]">
                     {item.title}
                   </span>
                 </div>
@@ -69,9 +71,9 @@ export default function Recommended() {
                   <img
                     src={item.thumbnail.regular.small}
                     alt={item.title}
-                    className="rounded-[8px] max-h-[110px] max-w-[164px]"
+                    className="md:max-w-[264px] md:max-h-[140px]  rounded-[8px] max-h-[110px] max-w-[164px]"
                   />
-                  <div className="opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
+                  <div className="md:text-[15px] opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
                     {item.year}{" "}
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     <img
@@ -83,7 +85,7 @@ export default function Recommended() {
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     {item.rating}
                   </div>
-                  <span className="text-[14px] tracking-[0.312px]">
+                  <span className="md:text-[18px] text-[14px] tracking-[0.312px]">
                     {item.title}
                   </span>
                 </div>
@@ -109,9 +111,9 @@ export default function Recommended() {
                   <img
                     src={item.thumbnail.regular.small}
                     alt={item.title}
-                    className="rounded-[8px] max-h-[110px] max-w-[164px]"
+                    className="md:max-w-[264px] md:max-h-[140px]  rounded-[8px] max-h-[110px] max-w-[164px]"
                   />
-                  <div className="opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
+                  <div className="md:text-[15px]  opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
                     {item.year}{" "}
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     <img
@@ -123,7 +125,7 @@ export default function Recommended() {
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     {item.rating}
                   </div>
-                  <span className="text-[14px] tracking-[0.312px]">
+                  <span className="md:text-[18px] text-[14px] tracking-[0.312px]">
                     {item.title}
                   </span>
                 </div>
@@ -151,9 +153,9 @@ export default function Recommended() {
                 <img
                   src={item.thumbnail.regular.small}
                   alt={item.title}
-                  className="rounded-[8px] max-h-[110px] max-w-[164px]"
+                  className="md:max-w-[264px] md:max-h-[140px]  rounded-[8px] max-h-[110px] max-w-[164px]"
                 />
-                <div className="opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
+                <div className="md:text-[15px]  opacity-50 flex text-white items-center justify-start gap-[6px] mt-[10px] text-[11px]">
                   {item.year}{" "}
                   <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                   <img
@@ -169,7 +171,7 @@ export default function Recommended() {
                   <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                   {item.rating}
                 </div>
-                <span className="text-[14px] tracking-[0.312px]">
+                <span className="md:text-[18px] text-[14px] tracking-[0.312px]">
                   {item.title}
                 </span>
               </div>
