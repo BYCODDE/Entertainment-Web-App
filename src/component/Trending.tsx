@@ -56,7 +56,7 @@ export default function Trending() {
                   <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%]">
                     <img src={bookMark} alt="bookmark" />
                   </div>
-                  <div className="md:text-[15px] opacity-50 flex text-white items-center justify-between mt-[60px] text-[10px] gap-[3px]">
+                  <div className="md:text-[15px] opacity-50 flex text-white items-center justify-start mt-[60px] text-[10px] gap-[3px]">
                     {item.year}
                     <div className="w-[3px] h-[3px] rounded-[50%] bg-[#FFF]"></div>
                     <img

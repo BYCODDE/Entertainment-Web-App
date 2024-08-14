@@ -21,7 +21,7 @@ export default function SignUp() {
   const onSubmit = (data: FormValues) => {
     console.log(data);
 
-    navigate("/home");
+    navigate("/login");
   };
 
   const onLogin = () => {
