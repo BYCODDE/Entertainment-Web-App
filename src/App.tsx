@@ -38,6 +38,7 @@ type DataContextType = {
   setTv: React.Dispatch<React.SetStateAction<boolean>>;
   marked: boolean;
   setMarked: React.Dispatch<React.SetStateAction<boolean>>;
+  setData : React.Dispatch<React.SetStateAction<TrendingItem[] | null>>
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -52,6 +53,17 @@ export const useData = () => {
 
 function App() {
   const [data, setData] = useState<DataContextType["data"]>(null);
+
+  // data?.map((item) => {
+
+  //   // if (item.isTrending) {
+  //     // item.isBookmarked = false;
+  //     // console.log(item.isBookmarked);
+
+  //   // }
+  // });
+
+
   const [error, setError] = useState<Error | null>(null);
   const [search, setSearch] = useState("");
   const [home, setHome] = useState(true);
@@ -89,6 +101,7 @@ function App() {
         setTv,
         marked,
         setMarked,
+        setData
       }}
     >
       <BrowserRouter>
