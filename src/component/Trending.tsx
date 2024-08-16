@@ -42,31 +42,33 @@ export default function Trending() {
 
   const handleBookmarkClick = (index: number) => {
     if (data) {
-      // Create new data array with updated bookmark status
-      const newData = data.map((item, i) =>
-        i === index ? { ...item, isBookmarked: !item.isBookmarked } : item
-      );
+      // Create a copy of the current data
+      const newData = [...data];
 
-      // Save updated data to localStorage
+      // Toggle the bookmark status of the item at the given index
+      newData[index].isBookmarked = !newData[index].isBookmarked;
+
+      // Save the updated data to localStorage
       localStorage.setItem("trendingData", JSON.stringify(newData));
 
-      // Update state
+      // Update state with the new data
       setData(newData);
     }
   };
 
-  // Debug: Check the data in state
-  useEffect(() => {
-    console.log("Current data from state:", data);
-  }, [data]);
 
-  // Debug: Check data from localStorage
-  useEffect(() => {
-    console.log(
-      "Data from localStorage:",
-      localStorage.getItem("trendingData")
-    );
-  }, []);
+  // // Debug: Check the data in state
+  // useEffect(() => {
+  //   console.log("Current data from state:", data);
+  // }, [data]);
+
+  // // Debug: Check data from localStorage
+  // useEffect(() => {
+  //   console.log(
+  //     "Data from localStorage:",
+  //     localStorage.getItem("trendingData")
+  //   );
+  // }, []);
 
   return (
     <div className="p-4 w-full">

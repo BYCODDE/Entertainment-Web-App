@@ -6,7 +6,6 @@ import { useData } from "../App";
 
 export default function Recommended() {
   const { data, search, home, movie, tv } = useData();
-  console.log(search);
 
   return (
     <div className="flex w-full h-full flex-col p-[16px] overflow-hidden overflow-y-scroll">
