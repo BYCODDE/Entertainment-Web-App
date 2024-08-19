@@ -4,17 +4,14 @@ import bookMark from "/assets/icon-bookmark-empty.svg";
 import bookMarkFull from "/assets/icon-bookmark-full.svg";
 import { useData } from "../App";
 
-export default function Trending() {
-  const { data, setData } = useData();
-  const scrollRef = useRef<HTMLDivElement>(null);
+// type StoredTrendingItem = {
+//   title: string;
+//   isBookmarked: boolean;
+// };
 
-  useEffect(() => {
-    // Load data from localStorage when the component mounts
-    const savedData = localStorage.getItem("trendingData");
-    if (savedData) {
-      setData(JSON.parse(savedData));
-    }
-  }, [setData]);
+export default function Trending() {
+  const { data, handleBookmarkClick } = useData();
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const scrollContainer = scrollRef.current;
@@ -40,36 +37,6 @@ export default function Trending() {
     };
   }, []);
 
-  const handleBookmarkClick = (index: number) => {
-    if (data) {
-      // Create a copy of the current data
-      const newData = [...data];
-
-      // Toggle the bookmark status of the item at the given index
-      newData[index].isBookmarked = !newData[index].isBookmarked;
-
-      // Save the updated data to localStorage
-      localStorage.setItem("trendingData", JSON.stringify(newData));
-
-      // Update state with the new data
-      setData(newData);
-    }
-  };
-
-
-  // // Debug: Check the data in state
-  // useEffect(() => {
-  //   console.log("Current data from state:", data);
-  // }, [data]);
-
-  // // Debug: Check data from localStorage
-  // useEffect(() => {
-  //   console.log(
-  //     "Data from localStorage:",
-  //     localStorage.getItem("trendingData")
-  //   );
-  // }, []);
-
   return (
     <div className="p-4 w-full">
       <h3 className="md:text-[32px] text-[20px] tracking-[0.312px]">
@@ -83,7 +50,7 @@ export default function Trending() {
           {data?.map((item, index) =>
             item.isTrending ? (
               <div
-                key={item.title}
+                key={index}
                 className="xl:w-[470px] xl:h-[230px] mt-[16px] rounded-[8px] p-[8px] min-w-[240px] max-h-[140px] relative"
                 style={{
                   backgroundImage: `url(${item?.thumbnail.trending?.small})`,
@@ -95,7 +62,8 @@ export default function Trending() {
                   <img
                     src={item.isBookmarked ? bookMarkFull : bookMark}
                     alt="bookmark"
-                    onClick={() => handleBookmarkClick(index)}
+                    onClick={() => handleBookmarkClick(item.title)}
+                    className="cursor-pointer"
                   />
                 </div>
                 <div className="md:text-[15px] opacity-50 flex text-white items-center justify-start mt-[60px] text-[10px] gap-[3px]">

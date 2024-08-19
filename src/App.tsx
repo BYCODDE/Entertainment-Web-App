@@ -38,7 +38,12 @@ type DataContextType = {
   setTv: React.Dispatch<React.SetStateAction<boolean>>;
   marked: boolean;
   setMarked: React.Dispatch<React.SetStateAction<boolean>>;
-  setData : React.Dispatch<React.SetStateAction<TrendingItem[] | null>>
+  setData: React.Dispatch<React.SetStateAction<TrendingItem[] | null>>;
+  bookmarks: TrendingItem[] | null;
+  setBookmarks: React.Dispatch<React.SetStateAction<TrendingItem[] | null>>;
+  handleBookmarkClick: (title: string) => void;
+  title: string;
+  isBookmarked: boolean;
 };
 
 const DataContext = createContext<DataContextType | undefined>(undefined);
@@ -53,16 +58,41 @@ export const useData = () => {
 
 function App() {
   const [data, setData] = useState<DataContextType["data"]>(null);
+  const [bookmarks, setBookmarks] = useState<TrendingItem[] | null>(null);
 
-  // data?.map((item) => {
-
-  //   // if (item.isTrending) {
-  //     // item.isBookmarked = false;
-  //     // console.log(item.isBookmarked);
-
-  //   // }
-  // });
-
+  useEffect(() => {
+    // Retrieve the bookmark status from localStorage on component mount
+    const storedBookmarks = localStorage.getItem("bookmarkStatus");
+    if (storedBookmarks) {
+      setBookmarks(JSON.parse(storedBookmarks));
+    }
+  }, []);
+  useEffect(() => {
+    const storedBookmarks = localStorage.getItem("bookmarkStatus");
+    if (storedBookmarks && data) {
+      const bookmarkData: DataContextType[] = JSON.parse(storedBookmarks);
+      const updatedData = data.map((item) => {
+        const matchingItem = bookmarkData.find(
+          (storedItem) => storedItem.title === item.title
+        );
+        return matchingItem
+          ? { ...item, isBookmarked: matchingItem.isBookmarked }
+          : item;
+      });
+      setData(updatedData);
+    }
+  }, [data, setData]);
+  const handleBookmarkClick = (title: string) => {
+    if (data) {
+      const newData = data.map((item) =>
+        item.title === title
+          ? { ...item, isBookmarked: !item.isBookmarked }
+          : item
+      );
+      localStorage.setItem("bookmarkStatus", JSON.stringify(newData));
+      setData(newData);
+    }
+  };
 
   const [error, setError] = useState<Error | null>(null);
   const [search, setSearch] = useState("");
@@ -101,7 +131,12 @@ function App() {
         setTv,
         marked,
         setMarked,
-        setData
+        setData,
+        handleBookmarkClick,
+        bookmarks,
+        setBookmarks,
+        title: "",
+        isBookmarked: false,
       }}
     >
       <BrowserRouter>
