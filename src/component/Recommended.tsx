@@ -67,11 +67,12 @@ export default function Recommended() {
             <div key={index} className="flex flex-col gap-[15px]">
               <div className="relative">
                 <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%]">
-                  {item.isBookmarked ? (
-                    <img src={bookMarkFull} alt="bookmark" />
-                  ) : (
-                    <img src={bookMark} alt="bookmark" />
-                  )}
+                  <img
+                    src={item.isBookmarked ? bookMarkFull : bookMark}
+                    alt="bookmark"
+                    onClick={() => handleBookmarkClick(item.title)}
+                    className="cursor-pointer"
+                  />
                 </div>
                 <img
                   src={item.thumbnail.regular.small}
@@ -109,11 +110,12 @@ export default function Recommended() {
             <div key={index} className="flex flex-col gap-[15px]">
               <div className="relative">
                 <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%]">
-                  {item.isBookmarked ? (
-                    <img src={bookMarkFull} alt="bookmark" />
-                  ) : (
-                    <img src={bookMark} alt="bookmark" />
-                  )}
+                  <img
+                    src={item.isBookmarked ? bookMarkFull : bookMark}
+                    alt="bookmark"
+                    onClick={() => handleBookmarkClick(item.title)}
+                    className="cursor-pointer"
+                  />
                 </div>
                 <img
                   src={item.thumbnail.regular.small}
@@ -154,11 +156,12 @@ export default function Recommended() {
             <div key={index} className="flex flex-col gap-[15px]">
               <div className="relative">
                 <div className="bg-[#10141E] bg-opacity-[0.500647] w-[32px] h-[32px] rounded-[50%] flex items-center justify-center absolute right-[3%] top-[3%]">
-                  {item.isBookmarked ? (
-                    <img src={bookMarkFull} alt="bookmark" />
-                  ) : (
-                    <img src={bookMark} alt="bookmark" />
-                  )}
+                  <img
+                    src={item.isBookmarked ? bookMarkFull : bookMark}
+                    alt="bookmark"
+                    onClick={() => handleBookmarkClick(item.title)}
+                    className="cursor-pointer"
+                  />
                 </div>
                 <img
                   src={item.thumbnail.regular.small}
